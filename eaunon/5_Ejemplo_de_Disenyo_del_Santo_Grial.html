@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	 <meta charset="utf-8" />
+    <style>
+	  body {
+	   font: 22px Helvetica;
+	   background: #999999;
+	  }
+	  header, footer {
+	   display: block;
+	   margin: 4px;
+	   padding: 5px;
+	   min-height: 50px;
+	   border: 1px solid #eebb55;
+	   border-radius: 7pt;
+	   background: #ffeebb;
+	   }
+	   
+	  #main {
+	   margin: 0px;
+	   padding: 0px;
+	   display:flex;
+	   flex-flow: row;
+	   border: 2px solid black;
+	   }
+
+	  article, nav, aside{margin: 4px; padding: 5px; border-radius: 7pt;}
+	 
+	  #main > article {	   
+	   border: 1px solid #cccc33;	   
+	   background: #dddd88;
+	   /*flex: flex-grow flex-shrink flex-basis*/
+	   flex: 3 1 60%;
+	   order: 2;/*Cuando estamos en modo fila (flex-flow:row;) indicamos que article aparecerá el segundo de la fila*/
+	   }
+	  
+	  #main > nav {
+	   border: 1px solid #8888bb;
+	   background: #ccccff;
+	   flex: 1 6 60%;
+	   order: 1; /*Cuando estamos en modo fila (flex-flow:row;) indicamos que nav aparecerá el primero de la fila*/
+	   }
+	  
+	  #main > aside {
+	   border: 1px solid #8888bb;
+	   background: #ccccff;
+	   flex: 1 6 60%;
+	   order: 3;/*Cuando estamos en modo fila (flex-flow:row;) indicamos que aside aparecerá el tercero de la fila*/
+	   }
+	 
+	  /* Too narrow to support three columns */
+	  @media all and (max-width: 640px) {
+		   #main, #page {
+			    flex-flow: column;
+		   }	
+		   #main > article, #main > nav, #main > aside {
+			    /* Return them to document order */
+			    order: 0;/*Cuando estamos en modo columna (flex-flow:column;) indicamos que todos los elementos tienen orden 0
+			    por lo tanto apareceran en el navegador en el mismo orden que aparecen en el código*/
+		   }	  
+		   #main > nav, #main > aside, header, footer {
+			    min-height: 50px;
+			    max-height: 50px;
+		   }
+	  }	
+	 </style>
+  </head>
+  <body>
+	 <header>header</header>
+	 <div id='main'>
+	    <article>article<br/><br/>
+	    FLEX-BASIS: es el primer valor que se lee y se reparte el espacio que ofrece la flex blox entre los flex items
+	   en nuestro caso article ocupará un 60% del flex box y los otras dos items un 20% cada uno del 100% del flex box.
+	   En caso de no darle valor, Firefox leerá el valor de flex-grow para repartir el espacio. Cambiad los porcentajes para ver el resultado.<br /><br/>
+	   FLEX-GROW: si después de haber ocupado por el valor de flex-basis sobra espacio en el flex box, 
+	   flex-grow repartirá ese espacio sobrante asignando una proporción a los diferentes flex item, en este caso los flex grow sumados son:
+	   3+1+1 = 5 por tanto article se llevará 3/5 partes y nav y aside 1/5 del espacio sobrante. Quitad el flex-basis o haced que los porcentajes ocupen menos del 100% para ver el comportamiento del flex-grow<br /><br/>
+	   FLEX-SHRINK: si los flex item ocupan más del total ofrecido por el flex box, este valor será el factor de reducción
+	   del flexbox, sumamos todos los flex-shrink 1+6+6 = 13 por tanto si falta espacio, article se reducirá 1/13 del tamaño del exceso
+	   y nav y aside se reducirán 6/13 del tamaño del exceso. Aumentad el porcentaje de las cajas para ver el comportamiento.
+	   </article>
+	    <nav>nav</nav>
+	    <aside>aside</aside>
+	 </div>
+	 <footer>footer</footer>
+  </body>
+</html>

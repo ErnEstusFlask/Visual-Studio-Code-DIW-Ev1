@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	 <meta charset="utf-8" />
+    <style>
+	  body {
+	   font: 24px Helvetica;
+	   background: #999999;
+	  }
+	  #main, #main2, #main3 {
+	   /*min-height: 800px;*/
+	   margin: 0px;
+	   padding: 0px;
+	   display:flex;
+	   flex-flow: row;
+	   }
+	   #main2{flex-flow: row-reverse;}
+	 
+	  article {
+	   margin: 4px;
+	   padding: 5px;
+	   border: 1px solid #cccc33;
+	   border-radius: 7pt;
+	   background: #dddd88;
+	   /*flex: flex-grow flex-shrink flex-basis*/
+	   flex: 3 1 60%;
+	   order: 2;/*Cuando estamos en modo fila (flex-flow:row;) indicamos que article aparecerá el segundo de la fila*/
+	   }
+	  
+	  nav {
+	   margin: 4px;
+	   padding: 5px;
+	   border: 1px solid #8888bb;
+	   border-radius: 7pt;
+	   background: #ccccff;
+	   flex: 1 6 60%;
+	   order: 1; /*Cuando estamos en modo fila (flex-flow:row;) indicamos que nav aparecerá el primero de la fila*/
+	   }
+	  
+	  aside {
+	   margin: 4px;
+	   padding: 5px;
+	   border: 1px solid #8888bb;
+	   border-radius: 7pt;
+	   background: #ccccff;
+	   flex: 1 6 60%;
+	   order: 3;/*Cuando estamos en modo fila (flex-flow:row;) indicamos que aside aparecerá el tercero de la fila*/
+	   }
+	 
+	  header, footer {
+	   display: block;
+	   margin: 4px;
+	   padding: 5px;
+	   min-height: 50px;
+	   border: 1px solid #eebb55;
+	   border-radius: 7pt;
+	   background: #ffeebb;
+	   }
+	 
+	  /* Too narrow to support three columns */
+/*	  @media all and (max-width: 640px) {
+		   #main{flex-flow: column;}
+		   #main3{flex-flow: column-reverse;}
+		
+			article, nav, aside {
+				order: 0;/*Cuando estamos por debajo de 640px, indicamos que todos los elementos tienen orden 0
+				por lo tanto apareceran en el navegador en el mismo orden que aparecen en el código*/
+			
+/*			#main3 > aside{display: none;}/*podríamos hacer desaparecer elementos sin problema*/
+	  
+	 </style>
+  </head>
+  <body>
+	 <header>header</header>
+	 <div id='main'>
+	    <article>fila1.pos1 flex-direction:row - article</article>
+	    <nav>fila1.pos2 - nav</nav>
+	    <aside>fila1.pos3 - aside</aside>
+	 </div>
+	 <div id='main2'>
+	    <article>fila2.pos1 flex-direction:row-reverse - article</article>
+	    <nav>fila2.pos2 - nav</nav>
+	    <aside> fila2.pos3 - aside</aside>
+	 </div>
+	 <div id='main3'>
+	    <article>fila3.pos1 flex-direction:row y column-reverse - article</article>
+	    <nav>fila3.pos2 - nav</nav>
+	    <aside>fila3.pos3 - aside</aside>
+	 </div>
+	 <footer>footer</footer>
+  </body>
+</html>

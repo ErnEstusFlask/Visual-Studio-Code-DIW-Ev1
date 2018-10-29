@@ -1,0 +1,23 @@
+.tipus1{
+    margin: 2em;
+    border-color: black;
+    border-style: solid;
+}
+#par1{
+    padding: 2em;
+    border: 1px black solid;
+}
+.tipus2{
+    margin: 5em 2em;
+    border: 10px red dashed;
+}
+#par2{
+    padding: 2em 4em;
+    width: 200px;
+    box-shadow: 10px purple;
+    border-radius: 15px 15px 0px 15px;
+    border-style: solid;
+}
+.tipus3{
+    
+}
