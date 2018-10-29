@@ -12,7 +12,8 @@ nav{
     background-color: rgb(204, 204, 255);
     border: solid 1px rgb(136, 136, 187);
     border-radius: 5px;
-    height: 55px;
+    align-self: start;
+    min-height: 55px;
 }
 
 main{
