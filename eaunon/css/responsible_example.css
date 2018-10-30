@@ -1,4 +1,4 @@
-@media screen and (max-width: 100px){
+@media screen and (min-width: 0px){
     div#myDiv{
         width: 100px;
         margin: 0px auto;
@@ -8,23 +8,17 @@
     }
 
 }
-@media screen and (max-width: 500px){
+@media screen and (min-width: 500px){
     div#myDiv{
         width: 500px;
-        margin: 0px auto;
-        height: 100px;
         background: #DDEE00;
-        font-size: 32px;
     }
 
 }
-@media screen and (max-width: 750px){
+@media screen and (min-width: 750px){
     div#myDiv{
         width: 750px;
-        margin: 0px auto;
-        height: 100px;
         background: crimson;
-        font-size: 32px;
     }
     
 }
