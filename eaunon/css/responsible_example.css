@@ -1,0 +1,31 @@
+@media screen and (max-width: 100px){
+    div#myDiv{
+        width: 100px;
+        margin: 0px auto;
+        height: 100px;
+        background: blue;
+        font-size: 32px;
+    }
+
+}
+@media screen and (max-width: 500px){
+    div#myDiv{
+        width: 500px;
+        margin: 0px auto;
+        height: 100px;
+        background: #DDEE00;
+        font-size: 32px;
+    }
+
+}
+@media screen and (max-width: 750px){
+    div#myDiv{
+        width: 750px;
+        margin: 0px auto;
+        height: 100px;
+        background: crimson;
+        font-size: 32px;
+    }
+    
+}
+
