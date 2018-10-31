@@ -1,25 +1,45 @@
 *{
     box-sizing: border-box;
 }
-
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  rgb(20, 68, 91);
+    font-size: 24px;
+    text-transform: uppercase;
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  rgb(20, 68, 91);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color:  #686868;
+    font-size: 12px;
+}
 header{
-    background-color: rgb(255, 238, 187);
-    border: solid 1px rgb(255, 255, 0);
+    background-color: rgb(211,0,0);
+    border: solid 1px;
     border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  #14445B;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    
 }
 
 nav{
-    background-color: rgb(204, 204, 255);
+    background-color: rgb(255, 255, 255);
     border: solid 1px rgb(136, 136, 187);
     border-radius: 5px;
-    align-self: start;
-    min-height: 55px;
+    
 }
 
 
 main{
-    background-color: rgb(221, 221, 136);
-    border: solid 1px rgb(204, 204, 51);
+    border: solid 1px ;
     border-radius: 5px;
 
 }
@@ -30,15 +50,21 @@ main{
 }
 
 section{
-    background-color: rgb(165, 42, 42);
+    background-color: rgb(236,236,236) ;
     border: solid 1px black;
     border-radius: 5px;
 }
-
+.news{
+    grid-column-end: span 2;
+}
+.advert{
+    background-color: aquamarine;
+}
 footer{
-    background-color: rgb(255, 238, 187);
-    border: solid 1px rgb(255, 255, 0);
+    background-color: rgb(0, 0, 0);
+    border: solid 1px;
     border-radius: 5px;
+    color: rgb(236,236,236);
 }
 #text1{
     font-size: 1em;
@@ -46,23 +72,43 @@ footer{
 #text2{
     font-size: 2em;
 }
-.container2{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-.container1{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-}
-/*
-@media print{
-    aspect-ratio
 
-    width <--
-    
-    orientation: landscape/portrait;
+@media screen and (min-width: 0px) and (max-width: 749px){
+    header{
+        grid-column: 2;
+        position: sticky;
+    }
+    nav{
+        grid-row:1;
+        position: sticky;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 55px 1fr;
+        grid-template-rows: 55px 2fr 5fr 55px;
+    }
+    .advert{
+        position: sticky;
+        grid-column-end: span 3;
+    }
+    .news{
+        grid-column-end: span 3;
+    }
+    .artList{
+        grid-column-end: span 3;
+    }
 
-    resolution
 }
-*/
+@media screen and (min-width: 750px){
+    header{
+        grid-column-end: span 3;
+    }
+    nav{
+        grid-row-end: span 2;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 12fr 2fr;
+        grid-template-rows: 55px 3fr 5fr;
+    }
+}
