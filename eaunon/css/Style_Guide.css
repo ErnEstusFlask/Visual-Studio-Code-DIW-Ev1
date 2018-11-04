@@ -76,26 +76,43 @@ footer{
 @media screen and (min-width: 0px) and (max-width: 749px){
     header{
         grid-column: 2;
-        position: sticky;
+        position: fixed;
+        width: 97.5%;
+        height: 55px;
     }
     nav{
         grid-row:1;
-        position: sticky;
+        position: fixed;
+        height: 55px;
+        width: 55px;
     }
     .container{
         display: grid;
         grid-template-columns: 55px 1fr;
-        grid-template-rows: 55px 2fr 5fr 55px;
+        grid-template-rows: 2fr 5fr;
+        border: 0px;
     }
     .advert{
-        position: sticky;
+        position: fixed;
         grid-column-end: span 3;
+        height: 55px;
+        bottom: 0px;
+        width: 97.5%;
+
     }
     .news{
+        margin-top: 55px;
         grid-column-end: span 3;
     }
     .artList{
         grid-column-end: span 3;
+    }
+    nav:hover {
+        background-color: rgb(211,0,0);
+        height: 255px;
+    }
+    footer{
+        display: none;
     }
 
 }
