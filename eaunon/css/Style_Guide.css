@@ -35,15 +35,11 @@ nav{
     border-radius: 5px;
     
 }
-main{
-    border: solid 1px ;
-    border-radius: 5px;
-
-}
 section{
     background-color: rgb(236,236,236) ;
     border: solid 1px black;
     border-radius: 5px;
+    padding: 15px;
 }
 
 aside{
@@ -64,7 +60,7 @@ footer{
     font-size: 2em;
 }
 
-@media screen and (min-width: 0px) and (max-width: 749px){
+@media screen and (min-width: 0px) and (max-width: 575px){
     header{
         position: sticky;
         top: 0px;
@@ -106,24 +102,108 @@ footer{
     }
 
 }
-@media screen and (min-width: 750px){
+@media screen and (min-width: 578px) and (max-width: 767px){
+    #dropMenu{
+        display: none;
+    }
+    li ul li{
+        display: block;
+    }
+    nav:hover #dropMenu{
+        display: block;
+    }
     header{
         grid-row: 1/2;
-        grid-column: 1/4;
+        grid-column: 2/4;
+        min-height: 55px;
+        position: sticky;
+        top:0;
     }
     nav{
-        grid-row: 2/4;
+        grid-row: 1/2;
         grid-column: 1/2;
+        min-height: 55px;
+        position: sticky;
+        top:0;
     }
     .container{
         display: grid;
         grid-template-columns: 125px 12fr auto;
-        grid-auto-rows: auto;
+        grid-auto-rows: 55px auto;
     }
     .news{
-        grid-column: span 2;
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+    .artList{
+        grid-column: 1/3;
+        grid-row: 2;
     }
     aside{
         max-width: 150px;
+        grid-row: 2/4;
+    }
+
+}
+@media screen and (min-width: 768px){
+    /*#dropMenu{
+        display: none;
+    }
+    li ul li{
+        display: block;
+    }
+    nav:hover #dropMenu{
+        display: block;
+    }*/
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        display: inline-block;
+        margin-right: 1px;
+    }
+    li ul{
+        display:none;
+    }
+    li ul li{
+        display: block;
+    }
+    li ul li a{
+        width: auto;
+        min-width: 125px;
+        padding: 0 20px;
+    }
+    header{
+        grid-row: 1/2;
+        grid-column: 1/4;
+        min-height: 55px;
+        position: sticky;
+        top:0;
+    }
+    nav{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        min-height: 55px;
+        position: sticky;
+        top:0;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 12fr auto;
+        grid-auto-rows: auto;
+    }
+    .news{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .artList{
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+    aside{
+        max-width: 150px;
+        grid-row: 3/5;
     }
 }
