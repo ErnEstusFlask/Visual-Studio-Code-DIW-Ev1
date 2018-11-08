@@ -104,6 +104,14 @@ footer{
 }
 @media screen and (min-width: 578px) and (max-width: 767px){
     #dropMenu{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    #artNavList{
+        display:none;
+    }
+    #dropMenu{
         display: none;
     }
     li ul li{
@@ -143,6 +151,7 @@ footer{
         max-width: 150px;
         grid-row: 2/4;
     }
+    
 
 }
 @media screen and (min-width: 768px){
