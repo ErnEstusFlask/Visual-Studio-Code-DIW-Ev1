@@ -1,53 +1,56 @@
 <!Doctype html>
-<html lang="en"    >
+<html lang="en">
+
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DAW</title>
-    <link rel="stylesheet"  href="css/SGStyle.css"/>    
-    <link rel="stylesheet"  href="css/SGLayout.css"/>
+    <title>CSS Tutorial</title>
+    <link rel="stylesheet" href="css/SGStyle.css" />
+    <link rel="stylesheet" href="css/SGLayout.css" />
 </head>
+
 <body>
     <div class="grid">
-        <header>Web Title</header>
-        <nav class="navigation"><p id="pmenu">Menu</p>
+        <header>CSS</header>
+        <nav class="navigation">
+            <p id="pmenu">Menu</p>
             <ul class="mainmenu">
-                <li><a href="">Main Page</a></li>
-                <li><a href="">Last updates</a></li>
-                <li><a href="">Articles List</a>
-                <ul class="submenu">
-                    <li><a href="">Recent Articles</a></li>
-                    <li><a href="">Most Viewed Articles</a></li>
+                <li><a href="boxmodel.html">Box Model</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="list.html">Lists</a>
+                    <ul class="submenu">
+                        <li><a href="list.html#orderedlist">Ordered List</a></li>
+                        <li><a href="list.html#unorderedlist">Unordered List</a></li>
                     </ul>
                 </li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Contact us</a></li>
+                <li><a href="grid.html">Grid Layout</a></li>
+                <li><a href="responsivegrid.html">Responsive Grid Layout</a></li>
             </ul>
         </nav>
-        <section class="news"><h1>Last News</h1></section>
+        <section class="news">
+            <h1>CSS Tutorial</h1>
+        </section>
         <section class="artList">
-            <article class="article">
-                <h2>Article Header</h2>
-                <p>Article Description</p>
-            </article>
-            <article class="article">
-                <h2>Article Header</h2>
-                <p>Article Description</p>
-            </article>
-            <article class="article">
-                <h2>Article Header</h2>
-                <p>Article Description</p>
-            </article>
-            <div class="article">
-                <h2>Article Header</h2>
-                <p>Article Description</p>
-            </article>
-            <article class="article">
-                <h2>Article Header</h2>
-                <p>Article Description</p>
+            <article>
+                <h2>Introduction</h2>
+                <p>In this web-page we will assit you to to develope and improve your skills on CSS.</p>
+                <p>This guide contains information on</p>
+                <ul id="mainli">
+                    <li><a href="boxmodel.html">Box Model</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                    <li><a href="list.html">Lists</a>
+                        <ul>
+                            <li><a href="list.html#orderedlist">Ordered List</a></li>
+                            <li><a href="list.html#unorderedlist">Unordered List</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="grid.html">Grid Layout</a></li>
+                    <li><a href="responsivegrid.html">Responsive Grid Layout</a></li>
+                </ul>
             </article>
         </section>
         <aside class="advert">Sponsors</aside>
         <footer>Footer & Social Media</footer>
     </div>
 </body>
+
 </html>
