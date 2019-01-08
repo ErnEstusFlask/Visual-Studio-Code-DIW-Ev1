@@ -1,0 +1,39 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial</title>
+    <link rel="stylesheet" href="css/SGStyle.css" />
+    <link rel="stylesheet" href="css/SGLayoutM.css" />
+</head>
+
+<body>
+    <div class="grid">
+        <header>CSS</header>
+        <section class="news">
+            <h2>Audio</h2>
+        </section>
+        <section class="artList">
+            <article>
+                <h2>Video</h2>
+                <video controls="" width="360" height="240">
+                    <source src="videos/recetapollo.mp4" type="video/mp4"><!-- Safari 5 -->
+                    <source src="videos/recetapollo.ogv" type="video/ogg; codecs='theora, vorbis'"><!-- Firefox 5 y Google Chrome º4 -->
+                    <source src="videos/recetapollo.webm" type="video/webm"><!-- Firefox 5 y Google Chrome 14 -->
+                    <object type="application/x-shockwave-flash" data="player_flv_maxi.swf" height="240" width="360">
+                        <param name="movie" value="player_flv_maxi.swf">
+                        <param name="FlashVars" value="flv=videos/recetapollo.flv">
+                        <embed type="application/x-shockwave-flash" width="360" height="240" src="player_flv_maxi.swf"
+                            flashvars="flv=videos/recetapollo.flv">
+                        </embed>
+                    </object>
+                </video>
+            </article>
+        </section>
+        <aside class="advert">Sponsors</aside>
+        <footer>Footer & Social Media</footer>
+    </div>
+</body>
+
+</html>
